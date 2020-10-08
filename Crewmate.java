@@ -9,10 +9,23 @@ public class Crewmate{
     private boolean death = false;
     private boolean use = false;
     Player player;
+    
 
-    public Use(){
+    public Using(){
         while(use == true){
             player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 1, 5));
         }
+    }
+
+    public taskFinish(){
+        continue;
+    }
+
+    public deathKill(){
+        continue;
+    }
+
+    public deathVote(){
+        continue;
     }
 }
