@@ -28,4 +28,8 @@ public class Crewmate{
     public deathVote(){
         continue;
     }
+//i dont know if this is needed because it probably going into the main game thingy
+    public Vote(){
+        continue;
+    }
 }
