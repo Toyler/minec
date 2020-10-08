@@ -1,3 +1,4 @@
+//Tyler before u do any of the game mechanics we need to make classes for the people
 package me.RitzCrackerzMan.amongus;
 
 import org.bukkit.Bukkit;
