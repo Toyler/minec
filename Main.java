@@ -32,8 +32,12 @@ public class GameManager extends JavaPlugin implements Listener {
 					Bukkit.broadcastMessage("Game has started!");
 					for (Player player : Bukkit.getOnlinePlayers()) {
 						int impostorOne = (int) (Math.random() * 10 + 1);
-						int impostorTwo = (int) (Math.random() * 10 + 1);
-						
+						while(true)
+						{
+							int impostorTwo = (int) (Math.random() * 10 + 1);
+							if(imposterOne == imposterTwo) { continue; }
+							else { break; }
+						}
 					}
 				}
 			}
