@@ -13,18 +13,20 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import Java.util.ArrayList;
 
-public class Imposter implements Player{
+public class Imposter extends Player{
     private int killCooldown = 30;
     private boolean vent = false;
     private boolean use = false;
+    String sabo = "";
     PlayerInventory inventory = player.getInventory();
     Lights = inventory.addItem(new ItemStack(Material.PAPER));
     Reactor = invetory.addItem(new ItemStack(Material.PAPER));
     Oxygen = invetory.addItem(new ItemStack(Material.PAPER));
     Communications = inventory.addItem(new ItemStack(Material.PAPER));
+
     public kill(){
         while(killCooldown == 0){
-            player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, 255, 10000, true));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, 10000, 255, true));
             invetory.addItem(new ItemStack(Material.WOOD_SWORD));
             killCooldown = 30;
         }
@@ -32,34 +34,33 @@ public class Imposter implements Player{
 
     public sabotage(){
         if(Lights.getClick() == ClickType.RIGHT){
-            sabo = lights;
+            sabo = "lights";
         }
         if(Reactor.getClick() == ClickType.RIGHT){
-            sabo = reactor;
+            sabo = "reactor";
         }
         if(Oxygen.getClick() == ClickType.RIGHT){
-            sabo = oxygen;
+            sabo = "oxygen";
         }
         if(Communications.getClick() == ClickType.Right){
-            sabo = communications;
+            sabo = "communications";
         }
         while(sabotageCooldown == 0){
-                if(sabo == lights){
+                if(sabo == "lights"){
                     player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 1, 10000));
                     lightsOff = true;
                     sabotageCooldown = 45;
                 }
-                if(sabo == reactor){
+                if(sabo == "reactor"){
                     Game.countdownTimerStart();
                     sabotageCooldown = 45;
                 }
-                if(sabo == communications){
-                    int temp = Game.totalTasks;
-                    Game.totalTasks = 0;
-                    
+                if(sabo == "communications"){
+                    tasks.total = false;
+                    tasks.display = false;
                     sabotageCooldown = 45;
                 }
-                if(sabo == oxygen){
+                if(sabo == "oxygen"){
                     //idk how they even fix this and idk what to start
                     sabotageCooldown = 45;
                 }
