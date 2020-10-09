@@ -22,7 +22,6 @@ public class Imposter implements Player{
     Reactor = invetory.addItem(new ItemStack(Material.PAPER));
     Oxygen = invetory.addItem(new ItemStack(Material.PAPER));
     Communications = inventory.addItem(new ItemStack(Material.PAPER));
-
     public kill(){
         while(killCooldown == 0){
             player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, 255, 10000, true));
@@ -55,7 +54,9 @@ public class Imposter implements Player{
                     sabotageCooldown = 45;
                 }
                 if(sabo == communications){
-                    //turn taskbar off
+                    int temp = Game.totalTasks;
+                    Game.totalTasks = 0;
+                    
                     sabotageCooldown = 45;
                 }
                 if(sabo == oxygen){
@@ -65,7 +66,7 @@ public class Imposter implements Player{
         }
     }
 
-    public vent()){
+    public vent(){
         //i honestly have no idea how this is going to work, do something with cmd blocks? no se
     }
 }
