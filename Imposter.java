@@ -59,7 +59,7 @@ public class Imposter extends Player{
         ItemStack Communication = new ItemStack(Material.PAPER);
         ItemMeta CommunicationMeta = Communication.getItemMeta();
 
-        CommunicationMeta.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Communication Sabotage");
+        CommunicationMeta.setDisplayName(ChatColor.GRAY + "" + ChatColor.BOLD + "Communication Sabotage");
         CommunicationMeta.setItemMeta(CommunicationMeta);
 
         return Communication;
@@ -70,23 +70,23 @@ public class Imposter extends Player{
         ItemStack Lights = new ItemStack(Material.PAPER);
         ItemMeta LightsMeta = Lights.getItemMeta();
 
-        LightsMeta.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Lights Sabotage");
+        LightsMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Lights Sabotage");
         LightsMeta.setItemMeta(LightsMeta);
 
         return Lights;
     }
-    
+
     public sabotage(){
-        if(Lights.getClick() == ClickType.RIGHT){
+        if(getLights.getClick() == ClickType.RIGHT){
             sabo = "lights";
         }
-        if(Reactor.getClick() == ClickType.RIGHT){
+        if(getReactor.getClick() == ClickType.RIGHT){
             sabo = "reactor";
         }
-        if(Oxygen.getClick() == ClickType.RIGHT){
+        if(getOxygen.getClick() == ClickType.RIGHT){
             sabo = "oxygen";
         }
-        if(Communications.getClick() == ClickType.Right){
+        if(getCommunication.getClick() == ClickType.Right){
             sabo = "communications";
         }
         while(sabotageCooldown == 0){
