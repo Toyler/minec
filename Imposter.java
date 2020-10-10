@@ -32,6 +32,49 @@ public class Imposter extends Player{
         }
     }
 
+    public ItemStack getOxygen() {
+
+        ItemStack Oxygen = new ItemStack(Material.PAPER);
+        ItemMeta OxygenMeta = Oxygen.getItemMeta();
+
+        OxygenMeta.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Oxygen Sabotage");
+        OxygenMeta.setItemMeta(OxygenMeta);
+
+        return Oxygen;
+    }
+
+    public ItemStack getReactor() {
+
+        ItemStack Reactor = new ItemStack(Material.PAPER);
+        ItemMeta ReactorMeta = Reactor.getItemMeta();
+
+        ReactorMeta.setDisplayName(ChatColor.BLACK + "" + ChatColor.BOLD + "Reactor Sabotage");
+        ReactorMeta.setItemMeta(ReactorMeta);
+
+        return Reactor;
+    }
+
+    public ItemStack getCommunication() {
+
+        ItemStack Communication = new ItemStack(Material.PAPER);
+        ItemMeta CommunicationMeta = Communication.getItemMeta();
+
+        CommunicationMeta.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Communication Sabotage");
+        CommunicationMeta.setItemMeta(CommunicationMeta);
+
+        return Communication;
+    }
+
+    public ItemStack getLights() {
+
+        ItemStack Lights = new ItemStack(Material.PAPER);
+        ItemMeta LightsMeta = Lights.getItemMeta();
+
+        LightsMeta.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Lights Sabotage");
+        LightsMeta.setItemMeta(LightsMeta);
+
+        return Lights;
+    }
     public sabotage(){
         if(Lights.getClick() == ClickType.RIGHT){
             sabo = "lights";
