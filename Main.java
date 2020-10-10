@@ -1,3 +1,4 @@
+//Tyler before u do any of the game mechanics we need to make classes for the people
 package me.RitzCrackerzMan.amongus;
 
 import org.bukkit.Bukkit;
@@ -32,11 +33,10 @@ public class GameManager extends JavaPlugin implements Listener {
 					Bukkit.broadcastMessage("Game has started!");
 					for (Player player : Bukkit.getOnlinePlayers()) {
 						int impostorOne = (int) (Math.random() * 10 + 1);
-						while(true)
+						int imposterTwo = imposterOne;
+						while(imposterOne == imposterTwo)
 						{
 							int impostorTwo = (int) (Math.random() * 10 + 1);
-							if(imposterOne == imposterTwo) { continue; }
-							else { break; }
 						}
 					}
 				}
