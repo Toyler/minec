@@ -75,6 +75,7 @@ public class Imposter extends Player{
 
         return Lights;
     }
+    
     public sabotage(){
         if(Lights.getClick() == ClickType.RIGHT){
             sabo = "lights";
