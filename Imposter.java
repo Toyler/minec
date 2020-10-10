@@ -20,14 +20,14 @@ public class Imposter extends Player{
     String sabo = "";
     PlayerInventory inventory = player.getInventory();
     Lights = inventory.addItem(new ItemStack(Material.PAPER));
-    Reactor = invetory.addItem(new ItemStack(Material.PAPER));
-    Oxygen = invetory.addItem(new ItemStack(Material.PAPER));
+    Reactor = inventory.addItem(new ItemStack(Material.PAPER));
+    Oxygen = inventory.addItem(new ItemStack(Material.PAPER));
     Communications = inventory.addItem(new ItemStack(Material.PAPER));
 
     public kill(){
         while(killCooldown == 0){
             player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, 10000, 255, true));
-            invetory.addItem(new ItemStack(Material.WOOD_SWORD));
+            inventory.addItem(new ItemStack(Material.WOOD_SWORD));
             killCooldown = 30;
         }
     }
