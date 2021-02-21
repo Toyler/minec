@@ -9,11 +9,9 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-
-
 import Java.util.ArrayList;
 
-public class Imposter extends Player{
+public class Imposter extends Player implements Listeners{
     private int killCooldown = 30;
     private boolean vent = false;
     private boolean use = false;
@@ -97,6 +95,7 @@ public class Imposter extends Player{
                 }
                 if(sabo == "reactor"){
                     Game.countdownTimerStart();
+                    Game.ReactorTrigger = true;
                     sabotageCooldown = 45;
                 }
                 if(sabo == "communications"){
@@ -105,6 +104,8 @@ public class Imposter extends Player{
                     sabotageCooldown = 45;
                 }
                 if(sabo == "oxygen"){
+                    oxygen = true;
+
                     //idk how they even fix this and idk what to start
                     sabotageCooldown = 45;
                 }
@@ -112,6 +113,7 @@ public class Imposter extends Player{
     }
 
     public vent(){
-        //i honestly have no idea how this is going to work, do something with cmd blocks? no se
-    }
+        //set into spectator
+        // probably some class for imposter in a vent idk 
+        }
 }
